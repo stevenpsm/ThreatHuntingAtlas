@@ -1,0 +1,35 @@
+name: Publish HTML release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out release tag
+        uses: actions/checkout@v4
+
+      - name: Publish HTML attachment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          asset=Enterprise-Compromise-Hunting-Atlas.html
+          test -s "$asset"
+          if ! gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release create "$RELEASE_TAG" --verify-tag --draft \
+              --title "ThreatHuntingAtlas $RELEASE_TAG" \
+              --notes 'Download Enterprise-Compromise-Hunting-Atlas.html from Assets and open it in your browser. This self-contained application runs offline with no installation or server required. The interface supports Chinese and English.
+
+          从 Assets 下载 Enterprise-Compromise-Hunting-Atlas.html，使用浏览器打开即可离线使用，无需安装或启动服务器，支持中英文界面。'
+          fi
+          gh release upload "$RELEASE_TAG" "$asset" --clobber
+          gh release edit "$RELEASE_TAG" --draft=false
