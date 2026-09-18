@@ -2,7 +2,9 @@
 
 An offline, self-contained investigation atlas for connecting enterprise technologies, attack patterns, evidence sources, historical vulnerabilities, and defensive hunting actions.
 
-![Enterprise Compromise Hunting Atlas demonstration](assets/compromise-hunting-atlas-preview-zh-CN.gif)
+### English demonstration
+
+![Enterprise Compromise Hunting Atlas English demonstration](assets/compromise-hunting-atlas-preview-en-US.gif)
 
 [中文说明](#中文说明)
 
@@ -75,20 +77,25 @@ The primary tested environment is Chromium on Linux. Firefox is expected to work
 ```text
 Enterprise-Compromise-Hunting-Atlas.html  Offline application
 README.md                                 Project and usage guide
+assets/compromise-hunting-atlas-preview-en-US.gif
 assets/compromise-hunting-atlas-preview-zh-CN.gif
 LICENSE                                   MIT License for software and documentation
-LICENSE-MEDIA.md                          CC BY 4.0 terms for the demonstration GIF
+LICENSE-MEDIA.md                          CC BY 4.0 terms for the demonstration media
 ```
 
 ## License
 
-The HTML application and project documentation are released under the [MIT License](LICENSE). The demonstration GIF is released under [CC BY 4.0](LICENSE-MEDIA.md).
+The HTML application and project documentation are released under the [MIT License](LICENSE). The English and Chinese demonstration GIFs are released under [CC BY 4.0](LICENSE-MEDIA.md).
 
 ---
 
 ## 中文说明
 
 Enterprise Compromise Hunting Atlas（企业关键系统失陷狩猎图谱）是一款完全离线、单 HTML、自包含的调查规划与失陷痕迹狩猎工具。它把目标系统、具体产品、攻击与失陷形态、历史漏洞、日志和证据工件、检测方法以及结论边界组织成一张可交互的调查地图。
+
+### 中文演示
+
+![企业关键系统失陷狩猎图谱中文操作演示](assets/compromise-hunting-atlas-preview-zh-CN.gif)
 
 ### 能解决什么问题
 
@@ -116,4 +123,4 @@ Enterprise Compromise Hunting Atlas（企业关键系统失陷狩猎图谱）是
 
 ### 许可证
 
-HTML 应用和项目文档使用 [MIT License](LICENSE)。演示 GIF 使用 [CC BY 4.0](LICENSE-MEDIA.md)。
+HTML 应用和项目文档使用 [MIT License](LICENSE)。中英文演示 GIF 使用 [CC BY 4.0](LICENSE-MEDIA.md)。
