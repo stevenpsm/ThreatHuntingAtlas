@@ -31,5 +31,10 @@ jobs:
 
           从 Assets 下载 Enterprise-Compromise-Hunting-Atlas.html，使用浏览器打开即可离线使用，无需安装或启动服务器，支持中英文界面。'
           fi
-          gh release upload "$RELEASE_TAG" "$asset" --clobber
+          gh release upload "$RELEASE_TAG" "$asset" \
+            assets/compromise-hunting-atlas-preview-en-US.gif \
+            assets/compromise-hunting-atlas-preview-zh-CN.gif --clobber
+          if [ -f ".github/release-notes/$RELEASE_TAG.md" ]; then
+            gh release edit "$RELEASE_TAG" --notes-file ".github/release-notes/$RELEASE_TAG.md"
+          fi
           gh release edit "$RELEASE_TAG" --draft=false
