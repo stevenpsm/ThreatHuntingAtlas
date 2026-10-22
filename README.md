@@ -6,6 +6,8 @@ An offline, self-contained investigation atlas for connecting enterprise technol
 
 ![Enterprise Compromise Hunting Atlas English demonstration](assets/compromise-hunting-atlas-preview-en-US.gif)
 
+This demonstration shows an earlier version. New investigation topics and matrix navigation described below are not yet shown.
+
 [中文说明](#中文说明)
 
 ## What it does
@@ -28,6 +30,14 @@ The current snapshot includes:
 - 29 defensive hunt recipes;
 - relationship-level detection methods and historical fingerprint guidance.
 
+### Investigation workflows
+
+- Follow an investigation path from a matrix intersection, with preceding/next steps, conditional branches, evidence requirements, and alternative explanations.
+- Start with AI supply-chain, Web compromise, or identity-misuse topics. AI guidance connects artifacts, CI, developer environments, and identity evidence.
+- Review account inventories, activity profiles, and enumeration behavior. Windows references include Hayabusa, Takajō, and APT-Hunter templates; these are instructions, not automatically generated statistics or executed tools.
+- Topic and matrix entries for the same target and pattern show the same reference collection and export. Counts distinguish recipes from tool references.
+- Expand the matrix and filters to fill the viewport, then restore the original layout. The blue outline marks the last viewed intersection—not risk or plan selection. Consecutive intersections retain the selected reference tab.
+
 ## Quick start
 
 1. Download `Enterprise-Compromise-Hunting-Atlas.html`.
@@ -35,6 +45,8 @@ The current snapshot includes:
 3. No installation, local server, administrator privilege, account, or network connection is required.
 4. Start from a target-system card, or open the **Attack & evidence matrix**.
 5. Use **Hunt plan** to select targets, products, and suspected scenarios, then mark the evidence currently available.
+
+In the matrix, use **Expand matrix / Restore layout** for more working space. Esc closes an open drawer first; another Esc restores the layout. Filters and the original scroll position are retained. The last viewed cell and reference-tab preference last only until refresh. When browsing related steps, the guide changes but the reference collection stays available; related later-stage material is not evidence that the case reached those stages.
 
 The default interface is Chinese. Select **English** in the upper-right language control for the complete English interface and knowledge view. You can also open:
 
@@ -77,6 +89,7 @@ The primary tested environment is Chromium on Linux. Firefox is expected to work
 ```text
 Enterprise-Compromise-Hunting-Atlas.html  Offline application
 README.md                                 Project and usage guide
+CHANGELOG.md                              User-facing changes
 assets/compromise-hunting-atlas-preview-en-US.gif
 assets/compromise-hunting-atlas-preview-zh-CN.gif
 LICENSE                                   MIT License for software and documentation
@@ -97,6 +110,8 @@ Enterprise Compromise Hunting Atlas（企业关键系统失陷狩猎图谱）是
 
 ![企业关键系统失陷狩猎图谱中文操作演示](assets/compromise-hunting-atlas-preview-zh-CN.gif)
 
+此演示基于较早版本，尚未展示下述新增专题和矩阵交互。
+
 ### 能解决什么问题
 
 - 面对某类操作系统、数据库、中间件、Web、容器、云或网络设备时，应该优先保全哪些证据；
@@ -104,7 +119,15 @@ Enterprise Compromise Hunting Atlas（企业关键系统失陷狩猎图谱）是
 - 某个历史漏洞是否真正适用于当前产品、版本和部署条件；
 - 当前证据能够支持什么结论，还缺少哪些独立证据进行互证。
 
-### 快速使用
+### 新增调查能力
+
+- 从矩阵交点进入完整调查路径，查看前后环节、条件分支、证据要求和正常解释。
+- 可从AI供应链、Web失陷、身份滥用专题开始调查；AI专题覆盖制品、CI、开发环境与身份线索的关联。
+- 身份调查补充账户清单、活动画像和账户枚举行为，以及Hayabusa、Takajō、APT-Hunter工具参考。页面不运行这些工具，也不自动生成账户统计。
+- 同一目标与形态从专题或矩阵进入，资料与导出一致；配方和工具分别计数，不把参考数量当检测能力数量。
+- 矩阵支持展开与恢复；蓝框标记最近查看交点，不表示风险或计划选择。连续切换交点保留当前资料页签。
+
+### 操作步骤
 
 1. 下载 `Enterprise-Compromise-Hunting-Atlas.html`。
 2. 使用最新版 Chrome、Chromium、Edge 或 Firefox 双击打开。
@@ -112,6 +135,8 @@ Enterprise Compromise Hunting Atlas（企业关键系统失陷狩猎图谱）是
 4. 从首页的目标系统卡片开始，或者进入“攻击与痕迹矩阵”。
 5. 在“狩猎计划”中选择目标、具体产品和怀疑场景，标记已有证据，然后生成并导出调查计划。
 6. 右上角可在中文和 English 之间切换，切换不会清除当前选择。
+
+点击“展开矩阵”可增大工作区；“恢复布局”返回原布局与滚动位置，保留筛选条件。Esc先关闭抽屉，再按一次恢复布局。最近查看标记和页签偏好仅当前页面会话有效，刷新后重置。切换调查步骤只改变指引，不缩减参考资料；后续阶段参考不表示案件已发生对应行为。
 
 ### 重要边界
 
